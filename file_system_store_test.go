@@ -37,9 +37,13 @@ func TestFileSystemStore(t *testing.T) {
 		got := store.GetPlayerScore("Chris")
 
 		want := 33
-
-		if got != want {
-			t.Errorf("got %d want %d", got, want)
-		}
+		assertScoresEquals(t, got, want)
 	})
+}
+
+func assertScoresEquals(t testing.TB, got, want int) {
+	t.Helper()
+	if got != want {
+		t.Errorf("got %d want %d", got, want)
+	}
 }
