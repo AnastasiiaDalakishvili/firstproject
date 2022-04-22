@@ -182,6 +182,6 @@ func assertResponseBody(t testing.TB, got, want string) {
 	}
 }
 
-func (s *StubPlayerStore) GetLeague() []Player {
+func (s *StubPlayerStore) GetLeague() League {
 	return s.league
 }
