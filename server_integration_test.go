@@ -34,8 +34,6 @@ func TestRecordingWinsAndRetrievingThem(t *testing.T) {
 		want := []Player{
 			{"Pepper", 3},
 		}
-
 		assertLeague(t, got, want)
 	})
-
 }
